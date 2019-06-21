@@ -1,0 +1,45 @@
+/* Print the following pattern for the given number of rows.
+if n is number of rows
+example n=4
+   1
+  212
+ 32123
+4321234
+
+*/
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+  // Write your code here  
+    int n;
+    cin>>n;
+    int i=1;
+    while(i<=n){
+        int j=1;
+        while(j<=(n-i)){
+            cout<<" ";
+            j++;
+        }
+        int k=i;
+        while(k >= 1){
+           cout<<k;
+           k--;
+        }
+        
+        
+        int l=2;
+        while(l<=i){
+            cout<<l;
+            
+            l++;
+        }
+        cout<<endl;
+       i++;
+    }
+  
+}
+
