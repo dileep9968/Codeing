@@ -1,0 +1,62 @@
+/*
+Print the following pattern for given number of rows.
+Input format :
+
+Line 1 : N (Total number of rows)
+
+example n=5
+
+output
+1234554321
+1234**4321
+123****321
+12******21
+1********1
+
+*/
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+  //  int n;
+  int n;
+  cin>>n;
+  int i=1;
+    while(i<=n){
+        int k=1;
+        int j=(n-i+2);
+        while(k<j){
+            cout<<k;
+            k++;
+        }
+        int r=i-1;
+        while(r>0){
+            cout<<"*";
+            r--;
+        }
+        
+        int end=n+i-1;
+        int st=n+1;
+        while(st<=end){
+            cout<<"*";
+            st++;
+        }
+        
+        int start = 2*n-i+1;
+        int val = (n-i+1);
+        
+        while(start >n){
+            cout<<val;
+            val--;
+            start--;
+        }
+        
+        cout<<endl;
+        i++;
+    }
+    
+    
+}
