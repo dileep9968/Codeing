@@ -1,0 +1,46 @@
+/*
+Print the following pattern for the given N number of rows.
+
+input 5
+
+output
+
+55555 
+4444
+333
+22
+1
+
+*/
+
+
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+       /*  Read input as specified in the question.
+	* Print output as specified in the question.
+	*/
+    
+    int n;
+    cin>>n;
+    
+    int i=1;
+    int num =n;
+    // number of row
+    while(i<=n){
+        int j=1;
+        // number of colums
+        while(j<=(n-i+1)){
+            cout<<num;
+            j++;
+        }
+        cout<<endl;
+        i++;
+        num--;
+    }
+  
+}
