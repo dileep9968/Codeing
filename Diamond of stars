@@ -1,0 +1,70 @@
+/*
+Print the following pattern for the given number of rows.
+Assume, N is always odd.
+
+input 7
+output
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+
+*/
+
+
+void printPatt(int n)
+{
+    //write your code here
+    int up = 1+(n/2);
+    int low =n/2;
+    int i=1;
+    // print uper diamond tringle
+    while( i<=up){
+        int space =1;
+        // print space
+        while(space<=(up-i)){
+            cout<<' ';
+            space++;
+        }
+        
+        // print half left star in upper tringle
+        int j=1;
+        while(j<=i){
+            cout<<'*';
+            j++;
+        }
+        
+        // print right half in upper tringle 
+        int k=1;
+        while(k<=(i-1)){
+            cout<<'*';
+            k++;
+        }
+        
+        cout<<endl;
+        i++;
+    }
+    
+    // print lower half diamond tringle
+    int j=low;
+    while(j>=1){
+        // space
+        int space = low-j+1;
+        while(space >=1){
+            cout<<' ';
+            space--;
+        }
+        int k= 1;
+        while(k<=(2*j-1)){
+            cout<<'*';
+            k++;
+        }
+        cout<<endl;
+        j--;
+        
+    }
+    
+}
