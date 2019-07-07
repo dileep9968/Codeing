@@ -1,0 +1,54 @@
+/*
+Print the following pattern for the given number of rows.
+input 3
+output
+
+   1
+  232
+ 34543
+ 
+ 
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    /*  Read input as specified in the question.
+     * Print output as specified in the question.
+     */
+    
+    int n;
+    cin>>n;
+    
+    int i=1;
+    // print the n rows
+    while(i<=n){
+        int j=1;
+        //print space 
+        while(j<=(n-i)){
+            cout<<' ';
+            j++;
+        }
+        
+        //Print left half+1 numbers in increasing order
+        int num=i;
+        while(num<=(2*i-1)){
+            cout<<num;
+            num++;
+            
+        }
+        
+        // print right half in decreasing order
+        int k=2*i-2;
+        int l=1;
+        while(l<=(i-1)){
+            cout<<k;
+            k--;
+            l++;
+        }
+        cout<<endl;
+        i++;
+    }
+    
+}
